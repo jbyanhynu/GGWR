@@ -1,0 +1,21 @@
+1. The startup file for the GGWR is 'start.m'.
+2. To organize your data in a style similar to 'demoData.xlsx'
+	(In the demoData.xlsx file, the column 'beta_***' represents the actual 
+	coefficients and does not require preparation.)
+3. The 'ReadData.m' function in GGWR provides a method for standardizing
+	independent variables, allowing users to decide according to their own needs.
+4. After preparing the data and configuring the paths, enter 'start' in the 
+	MATLAB command window to launch the program.
+5. Result：
+	[R2,adj_R2,list_betas,AICc,ics]
+	R2:googness-of-fit
+	adj_R2:adjust R2
+	list_betas:regression ceofficients
+		(The first six columns represent the estimated values and their 
+		first and second-order gradients for the regression coefficients 
+		of the first independent variable. Following that are the estimated 
+		values and first and second-order gradient values for the regression 
+		coefficients of the second independent variable. This pattern repeats 
+		in a loop.)
+	AICc: corrected Akaike Information Criterion
+	ics: Consistency of regression coefficient symbols
