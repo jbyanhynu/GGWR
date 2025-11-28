@@ -1,4 +1,4 @@
-function AICc = get_AICc(bw,px,py,x,y,pentalyCoe,type,sR)% aims to get the minimum AICc
+function AICc = get_AICc(bw,px,py,x,y,pentalyCoe,type)% aims to get the minimum AICc
 [row_px,col_x]=size(x);
 bw=round(bw);
 list_influ=zeros(1,row_px);%freedom of matrix
@@ -10,15 +10,14 @@ else
     order=6;
 end
 distance_matrix=pdist2([px,py],[px,py],'euclidean');
-distance_matrix=distance_matrix/sR;
 temp_distance_matrix=sort(distance_matrix);
 parfor k2=1:row_px
     u0=px(k2);
     v0=py(k2);
     if type==1
-        newxMatrix=[onesMatrix (px-u0)/sR (py-v0)/sR];%first-order
+        newxMatrix=[onesMatrix (px-u0) (py-v0)];%first-order
     else
-        newxMatrix=[onesMatrix (px-u0)/sR (py-v0)/sR (((px-u0)/sR).^2)/2 (((py-v0)/sR).^2)/2 (px-u0)/sR.*(py-v0)/sR];%second order
+        newxMatrix=[onesMatrix (px-u0) (py-v0) (((px-u0)).^2)/2 (((py-v0)).^2)/2 (px-u0).*(py-v0)];%second order
     end
     newX=zeros(row_px,order*col_x);
     for k1=1:col_x
@@ -43,7 +42,7 @@ parfor k2=1:row_px
     %xtx_inv_xt=(xxx'*xxx)\xxx';
     xtx_inv_xt=pinv(xxx'*xxx)*xxx';
     list_influ(k2)=xxx(k2,:)*xtx_inv_xt(:,k2);%hat matrix
-    predy=newX(k2,:)*betas';
+    predy=newX(k2,:)*betas;
     list_resid(k2) =y(k2,:) - predy;
 end
 tr_S=sum(list_influ);
