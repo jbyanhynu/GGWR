@@ -2,7 +2,6 @@
 clear;
 tic;
 [y,px,py,x]=ReadData('demoData.xlsx');
-sR=spatialResolution(px,py);
 p=size(x,2);
 
 type=2;%default value
@@ -20,9 +19,9 @@ qmax=length(px);
 options=optimset('fminbnd');
 options.Display='iter';
 options.TolX=1e-2;
-band_width=fminbnd('get_AICc',qmin,qmax,options,px,py,x,y,pentalyCoe,type,sR);
+band_width=fminbnd('get_AICc',qmin,qmax,options,px,py,x,y,pentalyCoe,type);
 
-[R2,adj_R2,list_betas,AICc]=calcR2GWR(px,py,x,y,round(band_width),pentalyCoe,type,sR);
+[R2,adj_R2,list_betas,AICc]=calcR2GWR(px,py,x,y,round(band_width),pentalyCoe,type);
 ics=ICS(list_betas,type);
 disp('GGWR finished!');
 toc;
