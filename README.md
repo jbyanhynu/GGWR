@@ -1,5 +1,5 @@
 # GGWR
-gradient-based geographically weighted regression
+Gradient-based geographically weighted regression
 
 
 1. Yan, J., Wu, B., & Duan, X. (2024). Modeling Spatial Anisotropic Relationships Using Gradient-Based
