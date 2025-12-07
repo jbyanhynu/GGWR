@@ -19,3 +19,6 @@ Specifically, the first column and every subsequent 6th column represent the reg
 Columns 2 and 3 store the gradient values for the first coefficient; adding 6 to these column indices yields the gradient values for each successive coefficient following the same pattern.
 
 AICc: the corrected Akaike Information Criterion.
+
+ICS: an interpretability of coefficient symbol (ICS) metric is designed to evaluate GWR coefficient estimates that are correlated and across spaces that are at times counterintuitive and
+contradictory in sign to global regression estimates. Further details regarding ICS can be found in Reference 2.
