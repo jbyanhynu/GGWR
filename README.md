@@ -10,9 +10,9 @@ Regression Model. Annals of the American Association of Geographers, 113(5), 119
 3. Yan, J. 2023. 地理加权回归各向异性回归模型与方法研究.
 
 
-R²: the coefficient of determination (model fit);
+R²: goodness of fit;
 
-adjR²: the adjusted coefficient of determination;
+adjR²: Adjusted goodness of fit;
 
 list_betas: a structured dataset containing the regression coefficients and their corresponding gradient field values.
 Specifically, the first column and every subsequent 6th column represent the regression coefficients.
