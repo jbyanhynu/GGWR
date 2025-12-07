@@ -39,8 +39,8 @@ parfor k2=1:row_px
     tempbeta=betas';
     position=(tempbeta~=0);
     xxx=Xnew(:,position);
-    %xtx_inv_xt=(xxx'*xxx)\xxx';
-    xtx_inv_xt=pinv(xxx'*xxx)*xxx';
+    xtx_inv_xt=(xxx'*xxx)\xxx';
+    %xtx_inv_xt=pinv(xxx'*xxx)*xxx';
     list_influ(k2)=xxx(k2,:)*xtx_inv_xt(:,k2);%hat matrix
     predy=newX(k2,:)*betas;
     list_resid(k2) =y(k2,:) - predy;
