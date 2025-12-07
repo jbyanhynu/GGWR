@@ -7,7 +7,7 @@ Geographically Weighted Regression. Annals of the American Association of Geogra
 2. Wu, B., Yan, J., & Cao, K. (2023). l0
 -Norm Variable Adaptive Selection for Geographically Weighted
 Regression Model. Annals of the American Association of Geographers, 113(5), 1190–1206.
-3. Yan, J. 地理加权回归各向异性回归模型与方法研究(2023).
+3. Yan, J. 2023. 地理加权回归各向异性回归模型与方法研究.
 
 
 R²: the coefficient of determination (model fit);
