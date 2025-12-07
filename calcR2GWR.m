@@ -41,7 +41,8 @@ parfor k2=1:row_px
     tempbeta=betas';
     position=(tempbeta~=0);
     xxx=Xw(:,position);
-    xtx_inv_xt=pinv(xxx'*xxx)*xxx';
+    xtx_inv_xt=(xxx'*xxx)\xxx';
+    %xtx_inv_xt=pinv(xxx'*xxx)*xxx';
     list_influ(k2)=xxx(k2,:)*xtx_inv_xt(:,k2);
     list_betas(k2,:)=betas;
     predy=newX(k2,:)*betas;
