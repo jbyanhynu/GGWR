@@ -20,5 +20,5 @@ Columns 2 and 3 store the gradient values for the first coefficient; adding 6 to
 
 AICc: the corrected Akaike Information Criterion.
 
-ICS: an interpretability of coefficient symbol (ICS) metric is designed to evaluate GWR coefficient estimates that are correlated and across spaces that are at times counterintuitive and
+ICS: an interpretability of coefficient symbol (ICS) metric is designed to evaluate GWR coefficient estimates that are correlated and across spaces that are at times counterintuitive and
 contradictory in sign to global regression estimates. Further details regarding ICS can be found in Reference 2.
