@@ -14,11 +14,11 @@ R²: goodness of fit;
 
 adjR²: Adjusted goodness of fit;
 
-list_betas: a structured dataset containing the regression coefficients and their corresponding gradient field values.
+list_betas: a structured dataset containing the regression coefficients and their corresponding gradient values.
 Specifically, the first column and every subsequent 6th column represent the regression coefficients.
 Columns 2 and 3 store the gradient values for the first coefficient; adding 6 to these column indices yields the gradient values for each successive coefficient following the same pattern.
 
 AICc: the corrected Akaike Information Criterion.
 
-ICS: an interpretability of coefficient symbol (ICS) metric is designed to evaluate GWR coefficient estimates that are correlated and across spaces that are at times counterintuitive and
+ICS: an interpretability of coefficient symbol (ICS) metric is designed to evaluate coefficient estimates that are correlated and across spaces that are at times counterintuitive and
 contradictory in sign to global regression estimates. Further details regarding ICS can be found in Reference 2.
